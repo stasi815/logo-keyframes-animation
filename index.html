@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotus Bloom</title>
+    <style>
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lotus-div {
+            width: 1000px;
+            height: 800px;
+            position: relative;
+            border: 1px solid;
+        }
+
+        @keyframes petalOneColor {
+            from {
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                background-color: rgba(196, 20, 82, 0.926);
+            }
+        }
+        @keyframes rotatePetal2 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(200px, 315px) rotate(-65deg);
+                background-color: rgba(235, 58, 27, 0.735);
+            }
+        }
+
+        @keyframes rotatePetal3 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(400px, 315px) rotate(-25deg);
+                background-color: rgba(235, 58, 27, 0.735);
+            }
+        }
+        @keyframes rotatePetal4 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(200px, 315px) rotate(-85deg);
+                background-color: rgba(24, 155, 170, 0.81);
+            }
+        }
+        @keyframes rotatePetal5 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(400px, 315px) rotate(-5deg);
+                background-color: rgba(24, 155, 170, 0.81);
+            }
+        }
+        @keyframes rotatePetal6 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(200px, 315px) rotate(-105deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+        }
+        @keyframes rotatePetal7 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(400px, 315px) rotate(15deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+        }
+        @keyframes rotatePetal8 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(200px, 315px) rotate(-125deg);
+                background-color: rgba(93, 199, 17, 0.454);
+            }
+        }
+        @keyframes rotatePetal9 {
+            from {
+                transform: translate(300px, 300px) rotate(-45deg);
+                background-color: rgba(38, 12, 114, 0.454);
+            }
+            to {
+                transform: translate(400px, 315px) rotate(35deg);
+                background-color: rgba(93, 199, 17, 0.454);
+            }
+        }
+
+        @keyframes rotateLeaf1 {
+            from {
+                transform: translate(245px, 460px) rotate(-75deg);
+            }
+            to {
+                transform: translate(220px, 520px) rotate(-100deg);
+            }
+        }
+
+        @keyframes rotateLeaf2 {
+            from {
+                transform: translate(455px, 460px) rotate(-15deg);
+            }
+            to {
+                transform: translate(480px, 520px) rotate(10deg);
+            }
+        }
+
+
+        .petal-1 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            transform: translate(300px, 300px) rotate(-45deg);
+            animation: petalOneColor 4s infinite;
+        }
+
+        .petal-2 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal2 4s infinite;
+        }
+
+        .petal-3 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal3 4s infinite;
+        }
+
+        .petal-4 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal4 4s infinite;
+        }
+
+        .petal-5 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal5 4s infinite;
+        }
+
+        .petal-6 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal6 4s infinite;
+        }
+
+        .petal-7 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal7 4s infinite;
+        }
+
+        .petal-8 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal8 4s infinite;
+        }
+
+        .petal-9 {
+            width: 400px;
+            height: 400px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            animation: rotatePetal9 4s infinite;
+        }
+
+        .leaf-1 {
+            width: 300px;
+            height: 300px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            background-color: rgba(11, 119, 11, 0.999);
+            animation: rotateLeaf1 4s infinite;
+        }
+
+        .leaf-2 {
+            width: 300px;
+            height: 300px;
+            border-radius: 100% 0% 100% 0% / 100% 0% 100% 0% ;
+            position: absolute;
+            background-color: rgba(11, 119, 11, 0.999);
+            animation: rotateLeaf2 4s infinite;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="lotus-div">
+        <div class="petal-9"></div>
+        <div class="petal-8"></div>
+        <div class="petal-7"></div>
+        <div class="petal-6"></div>
+        <div class="petal-5"></div>
+        <div class="petal-4"></div>
+        <div class="petal-3"></div>
+        <div class="petal-2"></div>
+        <div class="petal-1"></div>
+        <div class="leaf-1"></div>
+        <div class="leaf-2"></div>
+    </div>
+</body>
+</html>
