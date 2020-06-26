@@ -1,3 +1,4 @@
+@use "sass:list";
 
 $petalSize: 400px;
 $backgroundOG: rgba(38, 12, 114, 0.454);
@@ -6,8 +7,9 @@ $borderRadius: 100% 0% 100% 0% / 100% 0% 100% 0%;
 $leafSize: 300px;
 $firstPairPetalColor: rgba(235, 58, 27, 0.735);
 $secondPairPetalColor: rgba(24, 155, 170, 0.81);
+$thirdPetalColor: $backgroundOG;
 $fourthPairPetalColor: rgba(93, 199, 17, 0.454);
-// $colorList: $firstPairPetalColor, $secondPairPetalColor, $fourthPairPetalColor;
+$colorList: $firstPairPetalColor, $secondPairPetalColor, $thirdPetalColor, $fourthPairPetalColor;
 
 body {
     display: flex;
@@ -22,95 +24,37 @@ body {
     border: 1px solid;
 }
 
+
+@for $i from 0 through 3 {
+    @keyframes rotatePetal#{$i * 2 + 2} {
+        from {
+            transform: $startPosition;
+            background-color: $backgroundOG;
+        }
+        to {
+            transform: translate(200px, 315px) rotate(-#{65 + $i * 20}deg);
+            background-color: list.nth($colorList, $i + 1);
+        }
+    }
+
+    @keyframes rotatePetal#{$i * 2 + 3} {
+        from {
+            transform: $startPosition;
+            background-color: $backgroundOG;
+        }
+        to {
+            transform: translate(400px, 315px) rotate(#{-25 + $i * 20}deg);
+            background-color: list.nth($colorList, $i + 1);
+        }
+    }
+}
+
 @keyframes petalOneColor {
     from {
         background-color: $backgroundOG;
     }
     to {
         background-color: rgba(196, 20, 82, 0.926);
-    }
-}
-
-
-@keyframes rotatePetal2 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(200px, 315px) rotate(-65deg);
-        background-color: $firstPairPetalColor;
-    }
-}
-
-@keyframes rotatePetal3 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(400px, 315px) rotate(-25deg);
-        background-color: $firstPairPetalColor;
-    }
-}
-@keyframes rotatePetal4 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(200px, 315px) rotate(-85deg);
-        background-color: $secondPairPetalColor;
-    }
-}
-@keyframes rotatePetal5 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(400px, 315px) rotate(-5deg);
-        background-color: $secondPairPetalColor;
-    }
-}
-@keyframes rotatePetal6 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(200px, 315px) rotate(-105deg);
-        background-color: $backgroundOG;
-    }
-}
-@keyframes rotatePetal7 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(400px, 315px) rotate(15deg);
-        background-color: $backgroundOG;
-    }
-}
-@keyframes rotatePetal8 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(200px, 315px) rotate(-125deg);
-        background-color: $fourthPairPetalColor;
-    }
-}
-@keyframes rotatePetal9 {
-    from {
-        transform: $startPosition;
-        background-color: $backgroundOG;
-    }
-    to {
-        transform: translate(400px, 315px) rotate(35deg);
-        background-color: $fourthPairPetalColor;
     }
 }
 
